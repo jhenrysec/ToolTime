@@ -20,8 +20,10 @@ manifest.seed.json   optional seed metadata (category/description/version)
 ## Deploy
 
 ```bash
-sudo ./deploy.sh                 # installs and starts on port 8080
-sudo PORT=80 ./deploy.sh         # or pick a port
+sudo chmod +x armory.zip              # change permissions
+python3 -m zipfile -e armory.zip .    # unzip the armory.zip file, ansible control node doesn't have unzip
+sudo ./deploy.sh                      # installs and starts on port 8080
+sudo PORT=80 ./deploy.sh              # Optional (or pick a port)
 ```
 
 Then browse to `http://<host-ip>:8080/`. The page shows the splash, a search
