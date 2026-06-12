@@ -87,6 +87,11 @@ sudo rm -rf /opt/armory
 sudo userdel armory 2>/dev/null || true
 ```
 
+## Troubleshooting
+- If the webpage may be unaccesible until you add 'allow 8080/tcp' to the firewall 
+```bash
+sudo ufw allow 8080/tcp
+```
 ## Notes
 
 - Pure Python standard library; runs unprivileged on a port > 1024 by default.
